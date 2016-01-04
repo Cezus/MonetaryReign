@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <base href="@Url.Content("~")" />
+    <title>@ViewBag.Title</title>
+
+    <link href="~/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/Content/app.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <input type="hidden" id="base-url" value="@Url.Content("~")" />
+        @RenderBody()
+    </div>
+
+    <script src="~/bower_components/requirejs/require.js"></script>
+    <script src="~/app/app.config.js"></script>
+    <script src="~/app/app.js"></script>
+</body>
+</html>

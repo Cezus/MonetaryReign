@@ -1,0 +1,24 @@
+{
+  "name": "Monetary Reign",
+  "version": "0.0.0",
+  "authors": [
+    "Cees van Altena <ceesvana@hotmail.com>"
+  ],
+  "description": "Personal financial web application",
+  "keywords": [
+    "Financial",
+    "Money"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.monetaryreign.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5"
+  }
+}
