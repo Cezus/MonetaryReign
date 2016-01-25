@@ -4,13 +4,12 @@ define(["require", "exports", 'angular', 'app/dashboard/dashboard.controller'], 
         var baseUrl = document.getElementById('base-url').getAttribute('value');
         $stateProvider
             .state('dasboard', {
-            url: '/dashboard',
+            url: '/',
             templateUrl: baseUrl + 'app/dashboard/dashboard.html',
             controller: 'DashboardController',
             controllerAs: 'vm'
         });
-        $urlRouterProvider.when('', '/dashboard');
-        $urlRouterProvider.otherwise('/dashboard');
+        $urlRouterProvider.otherwise('/');
     }
     routes.$inject = ['$stateProvider', '$urlRouterProvider'];
     angular

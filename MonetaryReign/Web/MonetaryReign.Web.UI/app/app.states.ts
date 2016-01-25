@@ -8,15 +8,13 @@ function routes($stateProvider: ng.ui.IStateProvider, $urlRouterProvider: ng.ui.
 
     $stateProvider
         .state('dasboard', {
-            url: '/dashboard',
+            url: '/',
             templateUrl: baseUrl + 'app/dashboard/dashboard.html',
             controller: 'DashboardController',
             controllerAs: 'vm'
         })
 
-    $urlRouterProvider.when('', '/dashboard');
-
-    $urlRouterProvider.otherwise('/dashboard');
+    $urlRouterProvider.otherwise('/');
 }
 
 routes.$inject = ['$stateProvider', '$urlRouterProvider'];
