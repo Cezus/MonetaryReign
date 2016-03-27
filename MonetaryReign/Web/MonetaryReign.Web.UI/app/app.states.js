@@ -1,6 +1,10 @@
-define(["require", "exports", 'angular', 'app/dashboard/dashboard.controller'], function (require, exports, angular, dashboard) {
+define(["require", "exports", 'angular', 'app/dashboard/dashboard.controller'], function (require, exports, angular) {
+    angular
+        .module('monetaryreign')
+        .config(routes);
+    routes.$inject = ['$stateProvider', '$urlRouterProvider'];
     function routes($stateProvider, $urlRouterProvider) {
-        var f = dashboard;
+        //var f = dashboard
         var baseUrl = document.getElementById('base-url').getAttribute('value');
         $stateProvider
             .state('dasboard', {
@@ -11,9 +15,5 @@ define(["require", "exports", 'angular', 'app/dashboard/dashboard.controller'], 
         });
         $urlRouterProvider.otherwise('/');
     }
-    routes.$inject = ['$stateProvider', '$urlRouterProvider'];
-    angular
-        .module('monetaryreign')
-        .config(routes);
 });
 //# sourceMappingURL=app.states.js.map

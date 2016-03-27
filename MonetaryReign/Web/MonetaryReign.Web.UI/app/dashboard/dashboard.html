@@ -1,4 +1,19 @@
-﻿<div class="starter-template">
-    <h1>Bootstrap starter template</h1>
-    <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document. {{vm.test}}</p>
+﻿<div class="">
+    <h1>Bij- en afschrijvingen</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Datum</th>
+                <th>Omschrijving</th>
+                <th>Bedrag</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="transaction in vm.transactions">
+                <td>{{transaction['Datum']}}</td>
+                <td>{{transaction['Naam / Omschrijving']}}</td>
+                <td>{{(transaction['Af Bij'] == 'Bij' ? '':'-')+transaction['Bedrag (EUR)']}}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>

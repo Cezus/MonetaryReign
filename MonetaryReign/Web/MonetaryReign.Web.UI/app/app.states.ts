@@ -1,9 +1,15 @@
 ﻿/// <reference path="../typings/angularjs/angular.d.ts" />
 import angular = require('angular');
-import dashboard = require('app/dashboard/dashboard.controller');
+import 'app/dashboard/dashboard.controller';
+
+angular
+    .module('monetaryreign')
+    .config(routes);
+
+routes.$inject = ['$stateProvider', '$urlRouterProvider'];
 
 function routes($stateProvider: ng.ui.IStateProvider, $urlRouterProvider: ng.ui.IUrlRouterProvider) {
-    var f = dashboard
+    //var f = dashboard
     var baseUrl = document.getElementById('base-url').getAttribute('value');
 
     $stateProvider
@@ -16,9 +22,3 @@ function routes($stateProvider: ng.ui.IStateProvider, $urlRouterProvider: ng.ui.
 
     $urlRouterProvider.otherwise('/');
 }
-
-routes.$inject = ['$stateProvider', '$urlRouterProvider'];
-
-angular
-    .module('monetaryreign')
-    .config(routes);

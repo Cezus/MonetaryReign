@@ -4,7 +4,9 @@ require.config({
     paths: {
         app: '../app',
         angular: 'angular/angular',
-        'ui-router': 'angular-ui-router/release/angular-ui-router'
+        'ui-router': 'angular-ui-router/release/angular-ui-router',
+        'moment': 'moment/moment',
+        'angular-moment': 'angular-moment/angular-moment'
     },
     shim: {
         angular: {
@@ -12,6 +14,9 @@ require.config({
         },
         'ui-router': {
             deps: ['angular']
+        },
+        'angular-moment': {
+            deps: ['moment']
         }
     }
 });

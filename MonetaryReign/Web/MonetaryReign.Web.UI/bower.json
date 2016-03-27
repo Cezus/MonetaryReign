@@ -19,6 +19,8 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "~3.3.5"
+    "bootstrap": "~3.3.5",
+    "moment": "~2.11.2",
+    "angular-moment": "^0.10.3"
   }
 }
