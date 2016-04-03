@@ -7,6 +7,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{768FC1DF-852
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonetaryReign.Web.UI", "Web\MonetaryReign.Web.UI\MonetaryReign.Web.UI.csproj", "{709B2100-ADA2-4C60-9AA1-28C0E574C699}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{F05346AF-2A15-4631-B7D9-7433E1E821C8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{14405730-BD48-45BF-8316-17B0F30FF659}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonetaryReign.Model.Entities", "Model\MonetaryReign.Model.Entities\MonetaryReign.Model.Entities.csproj", "{1C5C7B91-66EE-42D4-93E8-8155A6D85FF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonetaryReign.Data.Database", "Data\MonetaryReign.Data.Database\MonetaryReign.Data.Database.csproj", "{35B35335-45BE-4140-B17B-048FBFD5F647}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonetaryReign.Web.Api", "Web\MonetaryReign.Web.Api\MonetaryReign.Web.Api.csproj", "{CA551DC7-C474-4778-AFE0-C9C50406ABCB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,11 +27,26 @@ Global
 		{709B2100-ADA2-4C60-9AA1-28C0E574C699}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{709B2100-ADA2-4C60-9AA1-28C0E574C699}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{709B2100-ADA2-4C60-9AA1-28C0E574C699}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C5C7B91-66EE-42D4-93E8-8155A6D85FF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C5C7B91-66EE-42D4-93E8-8155A6D85FF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C5C7B91-66EE-42D4-93E8-8155A6D85FF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C5C7B91-66EE-42D4-93E8-8155A6D85FF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35B35335-45BE-4140-B17B-048FBFD5F647}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35B35335-45BE-4140-B17B-048FBFD5F647}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35B35335-45BE-4140-B17B-048FBFD5F647}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35B35335-45BE-4140-B17B-048FBFD5F647}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA551DC7-C474-4778-AFE0-C9C50406ABCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA551DC7-C474-4778-AFE0-C9C50406ABCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA551DC7-C474-4778-AFE0-C9C50406ABCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA551DC7-C474-4778-AFE0-C9C50406ABCB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{709B2100-ADA2-4C60-9AA1-28C0E574C699} = {768FC1DF-8522-4BE9-B301-0D1ECF49C1ED}
+		{1C5C7B91-66EE-42D4-93E8-8155A6D85FF1} = {F05346AF-2A15-4631-B7D9-7433E1E821C8}
+		{35B35335-45BE-4140-B17B-048FBFD5F647} = {14405730-BD48-45BF-8316-17B0F30FF659}
+		{CA551DC7-C474-4778-AFE0-C9C50406ABCB} = {768FC1DF-8522-4BE9-B301-0D1ECF49C1ED}
 	EndGlobalSection
 EndGlobal
