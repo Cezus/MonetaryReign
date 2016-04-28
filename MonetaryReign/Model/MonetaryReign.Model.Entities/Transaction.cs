@@ -21,5 +21,19 @@ namespace MonetaryReign.Model.Entities
         public decimal Ammount { get; set; }
 
         public string Message { get; set; }
+
+        public override bool Equals(object other)
+        {
+            var transaction = other as Transaction;
+
+            return
+                transaction != null && (
+                this.Date.Date == transaction.Date.Date &&
+                this.Account == null || this.Account.AccountIban.Equals(transaction.Account.AccountIban) &&
+                this.Ammount.Equals(transaction.Ammount) &&
+                this.Name.Equals(transaction.Name) &&
+                this.ContraAccount.Equals(transaction.ContraAccount) &&
+                this.Message.Equals(transaction.Message));
+        }
     }
 }

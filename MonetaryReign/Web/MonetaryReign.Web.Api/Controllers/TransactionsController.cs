@@ -8,7 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
 using MonetaryReign.Data.Database;
+using MonetaryReign.Model.Entities;
 using MonetaryReign.Web.Api.Logic;
+using MonetaryReign.Web.Api.Models;
 
 namespace MonetaryReign.Web.Api.Controllers
 {
@@ -47,12 +49,35 @@ namespace MonetaryReign.Web.Api.Controllers
                 return NotFound();
             }
 
-            var transactions = converter.ConvertToTransactions(account, records);
+            var uploadedTransactions = converter.ConvertToTransactions(account, records);
+            List<Transaction> newTransactions = this.GetNewTransactions(account, uploadedTransactions);
 
-            context.Transactions.AddRange(transactions);
-            await context.SaveChangesAsync();
+            if (newTransactions.Any())
+            {
+                context.Transactions.AddRange(newTransactions);
+                await context.SaveChangesAsync();
+            }
 
-            return Ok(transactions);
+            return Ok(newTransactions);
+        }
+
+        private List<Transaction> GetNewTransactions(Model.Entities.Account account, List<Transaction> newTransactions)
+        {
+            var transactionsToSave = new List<Transaction>();
+
+            var first = newTransactions.Min(t => t.Date);
+            var latest = newTransactions.Max(t => t.Date);
+            var existingTransactions = context.Transactions.Where(t => t.Account.AccountIban.Equals(account.AccountIban) && t.Date >= first && t.Date <= latest).ToList();
+
+            foreach (var transaction in newTransactions)
+            {
+                if (!existingTransactions.Contains(transaction))
+                {
+                    transactionsToSave.Add(transaction);
+                }
+            }
+
+            return transactionsToSave;
         }
     }
 }
