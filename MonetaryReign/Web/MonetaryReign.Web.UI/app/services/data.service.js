@@ -1,4 +1,5 @@
 define(["require", "exports", 'angular'], function (require, exports, angular) {
+    "use strict";
     angular
         .module('monetaryreign.services')
         .factory('dataservice', dataservice);

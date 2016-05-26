@@ -1,4 +1,5 @@
 define(["require", "exports", 'angular', 'app/dashboard/dashboard.controller'], function (require, exports, angular) {
+    "use strict";
     angular
         .module('monetaryreign')
         .config(routes);

@@ -1,4 +1,5 @@
 define(["require", "exports", 'angular', 'app/services/data.service'], function (require, exports, angular) {
+    "use strict";
     angular
         .module('monetaryreign')
         .controller('DashboardController', DashboardController);
